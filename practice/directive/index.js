@@ -4,7 +4,7 @@ new Vue({
   el: '#root',
   template: `
     <div>
-    <div v-text="text">{{text}}</div>
+    <div v-text="text" v-pre>{{text}}</div>
     <div v-html="html"></div>
     <div v-if="active">active</div>
     <div v-else="active">else content</div>
@@ -15,7 +15,7 @@ new Vue({
     <ul>
       <li v-for="(value,key,index) in obj">{{key}}:{{value}}:{{index}}</li>
     </ul>
-    <input type="text" name="text" v-model.trim="text">
+    <input type="text" name="text" v-model.lazy="text">
     <input type="checkbox" v-model="active">
     <div>
         <input type="checkbox" v-model="arr" :value="1">
